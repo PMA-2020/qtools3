@@ -80,7 +80,7 @@ class Xlsform:
         return wb
 
     def xlsform_convert(self, validate=True):
-        msg = xls2xform_convert(self.path, self.outpath, validate=validate)
+        msg = xls2xform_convert(self.path, self.outpath, validate=validate, pretty_print = False )
         self.assert_itemsets_moved()
         return msg
 
