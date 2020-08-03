@@ -1,4 +1,4 @@
-
+import datetime
 import os.path
 import xml.etree.ElementTree as ElementTree
 
@@ -39,9 +39,9 @@ class Xform:
         self.data = new_data
 
     def inject_version(self):
-        version_stamp = '<!-- qtools v{} -->\n'.format(VERSION)
-        stamp_line_number = 1
-        self.data.insert(stamp_line_number, version_stamp)
+        timestamp = str(datetime.datetime.now(datetime.timezone.utc))
+        version_stamp = '<!-- qtools v{} {} -->'.format(VERSION, timestamp)
+        self.data.append(version_stamp)
 
     def overwrite(self):
         with open(self.filename, 'w') as f:

@@ -201,24 +201,24 @@ Certaines difficultés surviennent si `python` et` pip` ne sont pas ajoutés aut
 
 Accédez  à votre exécutable `pip`, probablement ici:
 
-`` `
+```
 cd C: \ Python27 \ Scripts
-`` `
+```
 
 Continuer l'installation ou la mise à niveau ...
 
 ## Installation
 
-REMARQUE: les utilisateurs de Windows commencent par la section _ ** Etapes Spécifiques Windows ** _. Ce package utilise une version modifiée de `pyxform` appelée` pmaxform` car le projet PyXForm a jusqu'à présent refusé d'accepter les demandes d'extraction de cet auteur pour certaines améliorations simples. Par conséquent, l'installation nécessite * deux * commandes au lieu d’ * une *. Ouvrez CMD ou Terminal et installez les packages pertinents ** séparément ** et ** dans l'ordre **
+REMARQUE: les utilisateurs de Windows commencent par la section _**Etapes Spécifiques Windows**_. Ce package utilise une version modifiée de `pyxform` appelée` pmaxform` car le projet PyXForm a jusqu'à présent refusé d'accepter les demandes d'extraction de cet auteur pour certaines améliorations simples. Par conséquent, l'installation nécessite *deux* commandes au lieu d’ *une*. Ouvrez CMD ou Terminal et installez les packages pertinents **séparément** et **dans l'ordre**
 
 Premièrement 
-`` `
+```
 pip installer https://github.com/jkpr/pmaxform/zipball/master
-`` `
+```
 Deuxièmement 
-`` `
+```
 pip installer https://github.com/jkpr/QTools2/zipball/master
-`` `
+```
 
 Pour les plus récents et les meilleurs, remplacez «master» dans les URL ci-dessus par «developer».
 
@@ -239,8 +239,8 @@ Le moyen le plus simple d'utiliser `qtools2` est d'utiliser un fichier du dossie
 
 
 | Nom du script | But |
-| --------------------- | ------- |
-| `xlsform-convert.py` | Convertir un ou plusieurs * types * de XLSForm avec une interface graphique. |
+| ------------- | --- |
+| `xlsform-convert.py` | Convertir un ou plusieurs *types* de XLSForm avec une interface graphique. |
 
 Windows associe généralement les fichiers `.py` à l'exécutable Python. Ainsi, un utilisateur Windows ne devrait avoir besoin que de double-clic sur l'icône du fichier de script. Cela démarre l’interprétre Python et lance le code.
  
@@ -259,7 +259,7 @@ Si ce qui précède est trop difficile, il est possible d’obtenir la même fon
 
 En plus d'être le bourreau du travail de `qtools2`, le module` qtools2.convert` fournit également un utilitaire de ligne de commande. La liaison de style nouveau (avec toutes les instructions contenues dans le XLSForm) est maintenant la valeur par défaut. La liaison de type ancien (instructions d’édition XML manuelle, ligne par ligne) est supprimée. Pour voir les fichiers d’aide et leur utilisation, exécutez-le dans le terminal.
 
-`` `
+```
 python -m qtools2.convert --help
 ```
 
@@ -268,12 +268,11 @@ python -m qtools2.convert --help
 | Type de conversion | Commande |
 | ------------------ | ------- |
 | Conversion de formulaire PMA | `python -m qtools2.convert FILENAME [FILENAME ...]` |
-|convertir et valider des équivalents de XLSForm-Offline, | `python -m qtools2.convert -ril FILENAME [FILENAME ...]` |
+| convertir et valider des équivalents de XLSForm-Offline, | `python -m qtools2.convert -ril FILENAME [FILENAME ...]` |
 
 #### Options
 | Drapeau court | Drapeau long | Description |
-| --- | --- | --- |
-
+| ------------- | ------------ | ----------- |
 | -r | --regular | Cet indicateur indique que le programme doit convertir en XForm et ne pas essayer d’apporter des modifications spécifiques à PMA2020. |
 | -p | --preexisting | Incluez cet indicateur (drapeau) pour empêcher le remplacement de fichiers préexistants. |
 | -n | --novalidate | Ne validez pas la sortie XML avec ODK Validate. N'effectuez pas de contrôles supplémentaires sur (1) les données de colonnes indéfinies, (2) les références de variables en désordre. |
@@ -288,9 +287,9 @@ python -m qtools2.convert --help
 
 Pour ceux qui souhaitent utiliser une interface graphique lancée à partir de la ligne de commande., Le pipeline QTools2 commence ainsi
 
-`` `
+```
 python -m qtools2
-`` `
+```
 
 et vérifiez l’utilisation en ajoutant l’indicateur `--help` à la commande ci-dessus.
 
@@ -300,9 +299,9 @@ NOTE: l'option `-v2` a été supprimée à partir de la version 0.2.3.
 
 REMARQUE: les utilisateurs de Windows commencent par la section _ ** Etapes spécifiques Windows ** _. Pour installer les mises à jour `qtools2`, utilisez
 
-`` `
+```
 pip installer https://github.com/jkpr/QTools2/zipball/master --upgrade
-`` `
+```
 
 Pour les plus récentes et les meilleures, remplacez «master dans les URL ci-dessus par «developer».
 
